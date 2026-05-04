@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Product — Veloura Candles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar scrolled" id="navbar" style="background:rgba(10,10,10,.97)">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><span class="logo-v">V</span>ELOURA</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="icon-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div id="productDetail">
+  <div class="product-page-grid">
+    <!-- GALLERY -->
+    <div class="product-gallery">
+      <div class="gallery-main"><img id="mainImg" src="" alt="Product"/></div>
+      <div class="gallery-thumbs" id="thumbs"></div>
+    </div>
+
+    <!-- DETAIL -->
+    <div class="product-detail">
+      <p class="product-category" id="pdCategory" style="font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:#C9A84C;margin-bottom:.5rem"></p>
+      <h1 id="pdName"></h1>
+      <div class="product-rating">
+        <span class="stars" id="pdRating"></span>
+        <span id="pdReviews"></span>
+      </div>
+      <div class="price" id="pdPrice"></div>
+      <p style="font-size:.85rem;color:#666;line-height:1.9;margin-bottom:1.5rem" id="pdDesc"></p>
+
+      <p style="font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:.8rem">Fragrance Notes</p>
+      <div class="fragrance-notes" id="pdNotes"></div>
+
+      <p style="font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:.8rem">Quantity</p>
+      <div class="qty-selector">
+        <button id="qtyMinus">−</button>
+        <span id="qtyVal">1</span>
+        <button id="qtyPlus">+</button>
+      </div>
+
+      <div class="product-actions">
+        <button class="btn-gold" id="addCartBtn">Add to Cart</button>
+        <button class="btn-outline" id="buyNowBtn">Buy Now</button>
+      </div>
+
+      <div class="product-meta" id="pdMeta"></div>
+
+      <div class="product-tabs">
+        <div class="tab-headers">
+          <button class="tab-btn active" data-tab="tabDesc">Description</button>
+          <button class="tab-btn" data-tab="tabCare">Candle Care</button>
+          <button class="tab-btn" data-tab="tabShip">Shipping</button>
+        </div>
+        <div id="tabDesc" class="tab-content active">
+          <p>Every Veloura candle is hand-poured in small batches using 100% natural soy wax and premium fragrance oils. No parabens, no phthalates. Just pure, clean luxury.</p>
+        </div>
+        <div id="tabCare" class="tab-content">
+          <p>✦ First burn: allow wax to pool to the edges (2–3 hrs).<br/>✦ Trim wick to 5mm before each use.<br/>✦ Never burn more than 4 hours at a time.<br/>✦ Keep away from drafts and children.</p>
+        </div>
+        <div id="tabShip" class="tab-content">
+          <p>✦ Free shipping on orders above ₹999.<br/>✦ Delivered in 3–5 business days across India.<br/>✦ Luxury gift packaging available.<br/>✦ Easy 7-day returns.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="container" style="margin-bottom:5rem">
+    <div class="section-header">
+      <p class="eyebrow">You May Also Like</p>
+      <h2 class="section-title">Related Candles</h2>
+    </div>
+    <div class="products-grid" id="relatedGrid"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

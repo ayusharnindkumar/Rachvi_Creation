@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Shop — Veloura Candles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar scrolled" id="navbar" style="background:rgba(10,10,10,.97)">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><span class="logo-v">V</span>ELOURA</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="index.html#collections">Collections</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="icon-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="shop-hero">
+  <p class="eyebrow">Our Full Range</p>
+  <h1>The Collection</h1>
+  <p>Every scent. Every mood. Crafted with intention.</p>
+</div>
+
+<div class="shop-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="filter-group">
+      <h3>Category</h3>
+      <label class="filter-option"><input type="checkbox" class="cat-filter" value="floral"> Floral</label>
+      <label class="filter-option"><input type="checkbox" class="cat-filter" value="woody"> Woody &amp; Oud</label>
+      <label class="filter-option"><input type="checkbox" class="cat-filter" value="citrus"> Citrus</label>
+      <label class="filter-option"><input type="checkbox" class="cat-filter" value="festive"> Festive</label>
+    </div>
+    <div class="filter-group">
+      <h3>Max Price</h3>
+      <input type="range" class="price-range" id="priceRange" min="500" max="2500" value="2500" step="100"/>
+      <p style="font-size:.78rem;color:#888;margin-top:.5rem">Up to <span id="priceVal">₹2,500</span></p>
+    </div>
+    <div class="filter-group">
+      <h3>Burn Time</h3>
+      <label class="filter-option"><input type="checkbox"> 30–40 hrs</label>
+      <label class="filter-option"><input type="checkbox"> 40–50 hrs</label>
+      <label class="filter-option"><input type="checkbox"> 50+ hrs</label>
+    </div>
+    <div class="filter-group">
+      <h3>Wax Type</h3>
+      <label class="filter-option"><input type="checkbox"> Soy Wax</label>
+      <label class="filter-option"><input type="checkbox"> Coconut Wax</label>
+    </div>
+    <button class="btn-outline" style="width:100%;justify-content:center" onclick="location.href='shop.html'">Reset Filters</button>
+  </aside>
+
+  <!-- MAIN -->
+  <div>
+    <div class="shop-toolbar">
+      <p class="results-count" id="resultCount">8 Products</p>
+      <select id="sortSelect">
+        <option value="default">Sort: Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="rating">Top Rated</option>
+      </select>
+    </div>
+    <div class="products-grid" id="shopGrid"></div>
+  </div>
+</div>
+
+<footer class="footer" style="margin-top:4rem">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:1px solid #1a1a1a;padding-top:1.5rem">
+      <p>© 2026 Veloura Candles</p>
+      <p>Light Luxury. Feel Serenity.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

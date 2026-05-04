@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veloura Candles — Light Luxury. Feel Serenity.</title>
+  <meta name="description" content="Veloura Candles – Premium handcrafted luxury candles. Floral, Woody, Citrus & Festive collections. Shop now in India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-v">V</span>ELOURA
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <a href="cart.html" class="icon-btn" aria-label="Cart">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="search-bar" id="searchBar">
+    <input type="text" placeholder="Search luxury candles..." id="searchInput" onkeyup="handleSearch()" />
+    <button onclick="toggleSearch()">✕</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1603006905003-be475563bc59?w=1800&q=90')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1574259392081-cbf174cb4416?w=1800&q=90')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=1800&q=90')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content animate-in">
+    <p class="hero-eyebrow">New Collection 2026</p>
+    <h1 class="hero-title">Light Luxury.<br/><em>Feel Serenity.</em></h1>
+    <p class="hero-subtitle">Handcrafted with the finest waxes and botanicals.<br/>A ritual of calm for every home.</p>
+    <div class="hero-cta">
+      <a href="shop.html" class="btn-gold">Explore Collection</a>
+      <a href="#collections" class="btn-outline-light">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+  <div class="hero-dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>✦ Floral Collection</span>
+    <span>✦ Woody & Oud</span>
+    <span>✦ Citrus Blends</span>
+    <span>✦ Festive Editions</span>
+    <span>✦ Free Shipping ₹999+</span>
+    <span>✦ Eco Soy Wax</span>
+    <span>✦ Floral Collection</span>
+    <span>✦ Woody & Oud</span>
+    <span>✦ Citrus Blends</span>
+    <span>✦ Festive Editions</span>
+    <span>✦ Free Shipping ₹999+</span>
+    <span>✦ Eco Soy Wax</span>
+  </div>
+</div>
+
+<!-- COLLECTIONS -->
+<section class="section" id="collections">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Curated for You</p>
+      <h2 class="section-title">Our Collections</h2>
+      <p class="section-sub">Four worlds of scent. Each one a journey.</p>
+    </div>
+    <div class="collections-grid">
+      <a href="shop.html?cat=floral" class="collection-card" style="background-image:url('https://images.unsplash.com/photo-1612198273689-5e22faefed56?w=700&q=80')">
+        <div class="col-overlay"></div>
+        <div class="col-content">
+          <h3>Floral</h3>
+          <p>Rose · Lavender · Jasmine</p>
+          <span class="col-link">Shop Now →</span>
+        </div>
+      </a>
+      <a href="shop.html?cat=woody" class="collection-card" style="background-image:url('https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=700&q=80')">
+        <div class="col-overlay"></div>
+        <div class="col-content">
+          <h3>Woody &amp; Oud</h3>
+          <p>Sandalwood · Cedar · Amber</p>
+          <span class="col-link">Shop Now →</span>
+        </div>
+      </a>
+      <a href="shop.html?cat=citrus" class="collection-card" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80')">
+        <div class="col-overlay"></div>
+        <div class="col-content">
+          <h3>Citrus</h3>
+          <p>Bergamot · Lemon · Yuzu</p>
+          <span class="col-link">Shop Now →</span>
+        </div>
+      </a>
+      <a href="shop.html?cat=festive" class="collection-card" style="background-image:url('https://images.unsplash.com/photo-1534329539061-64caeb388c42?w=700&q=80')">
+        <div class="col-overlay"></div>
+        <div class="col-content">
+          <h3>Festive</h3>
+          <p>Spice · Winter · Velvet</p>
+          <span class="col-link">Shop Now →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BEST SELLERS -->
+<section class="section bg-dark" id="bestsellers">
+  <div class="container">
+    <div class="section-header light">
+      <p class="eyebrow gold">Best Sellers</p>
+      <h2 class="section-title">Most Loved</h2>
+      <p class="section-sub" style="color:#aaa">The scents our community can't live without.</p>
+    </div>
+    <div class="products-grid" id="homeProdGrid"></div>
+    <div style="text-align:center;margin-top:3rem">
+      <a href="shop.html" class="btn-gold">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND STORY -->
+<section class="section brand-story" id="about">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1602928321679-560bb453f190?w=700&q=80" alt="Veloura craft" loading="lazy" />
+        <div class="story-badge">Est. 2024</div>
+      </div>
+      <div class="story-text">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">Crafted with<br/><em>Intention</em></h2>
+        <p>Veloura Candles was born from a simple belief — that light should feel luxurious. Every candle is hand-poured in small batches using premium soy wax, lead-free cotton wicks, and the finest fragrance oils sourced from around the world.</p>
+        <p style="margin-top:1rem">We don't just make candles. We craft moments — of stillness, warmth, and pure sensory joy.</p>
+        <div class="story-stats">
+          <div><span>12+</span><p>Fragrances</p></div>
+          <div><span>50Hr</span><p>Burn Time</p></div>
+          <div><span>100%</span><p>Soy Wax</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section bg-ivory" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Reviews</p>
+      <h2 class="section-title">What They Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"The Rose Elysium candle is pure poetry. My bedroom smells like a five-star Parisian hotel. Worth every rupee."</p>
+        <div class="reviewer"><span class="rev-avatar">PM</span><div><strong>Priya Mehta</strong><small>Mumbai</small></div></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"I gifted the Festive set for Diwali — absolutely everyone asked where it was from. The packaging alone is an experience."</p>
+        <div class="reviewer"><span class="rev-avatar">AR</span><div><strong>Arjun Rao</strong><small>Bangalore</small></div></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Sandalwood Noir has become my evening ritual. Burns for 50+ hours and the throw is incredible. Luxury at its finest."</p>
+        <div class="reviewer"><span class="rev-avatar">SG</span><div><strong>Shreya Gupta</strong><small>Delhi</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM STRIP -->
+<section class="insta-strip">
+  <div class="insta-grid">
+    <div class="insta-img" style="background-image:url('https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=400&q=80')"><div class="insta-overlay">@velouracandles</div></div>
+    <div class="insta-img" style="background-image:url('https://images.unsplash.com/photo-1574259392081-cbf174cb4416?w=400&q=80')"><div class="insta-overlay">@velouracandles</div></div>
+    <div class="insta-img" style="background-image:url('https://images.unsplash.com/photo-1603006905003-be475563bc59?w=400&q=80')"><div class="insta-overlay">@velouracandles</div></div>
+    <div class="insta-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80')"><div class="insta-overlay">@velouracandles</div></div>
+    <div class="insta-img" style="background-image:url('https://images.unsplash.com/photo-1534329539061-64caeb388c42?w=400&q=80')"><div class="insta-overlay">@velouracandles</div></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="container" style="text-align:center">
+    <p class="eyebrow gold">Stay in the Light</p>
+    <h2 class="section-title" style="color:#fff">Join the Veloura Circle</h2>
+    <p style="color:#aaa;margin-bottom:2rem">Early access, exclusive launches & 10% off your first order.</p>
+    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+      <input type="email" placeholder="Your email address" required />
+      <button type="submit" class="btn-gold">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:1rem"><span class="logo-v">V</span>ELOURA</div>
+        <p>Light Luxury. Feel Serenity.</p>
+        <p style="margin-top:1rem;font-size:0.8rem;color:#666">Premium handcrafted candles made with love in India.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Pinterest">PT</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="shop.html?cat=floral">Floral Collection</a>
+        <a href="shop.html?cat=woody">Woody &amp; Oud</a>
+        <a href="shop.html?cat=citrus">Citrus Blends</a>
+        <a href="shop.html?cat=festive">Festive Edition</a>
+        <a href="shop.html">All Products</a>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <a href="#">Our Story</a>
+        <a href="#">Sustainability</a>
+        <a href="#">Ingredients</a>
+        <a href="#">Gift Wrapping</a>
+        <a href="#">Bulk Orders</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#">Track Order</a>
+        <a href="#">Returns & Refunds</a>
+        <a href="#">Shipping Info</a>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Veloura Candles. All rights reserved.</p>
+      <p>Designed with ✦ in India</p>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
