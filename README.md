@@ -216,7 +216,8 @@ Open `http://localhost:3000` in your browser.
 
 One recommended production setup is:
 
-- Deploy the Next.js frontend on Vercel.
+- Deploy the Next.js frontend on Netlify or Vercel. The root `netlify.toml`
+  configures Netlify to build the app from `frontend/`.
 - Deploy the Express backend on Render or another Node.js hosting service.
 - Use MongoDB Atlas for the production database.
 - Store product images in Cloudinary.
@@ -225,8 +226,12 @@ One recommended production setup is:
 After deployment:
 
 1. Set `NEXT_PUBLIC_API_URL` to the public backend URL ending in `/api`.
-2. Set `FRONTEND_URL` on the backend to the public frontend URL.
-3. Add every backend environment variable through the hosting dashboard.
+2. Set `FRONTEND_URL` on the backend to the public frontend URL (for example,
+   `https://rachvi-creation.netlify.app`, with no trailing slash).
+3. Add every backend environment variable through the hosting dashboard. On
+   Render, the `MONGODB_URI` value must be the complete Atlas URI beginning
+   with `mongodb+srv://` or `mongodb://`; do not paste `MONGODB_URI=` into the
+   value field and do not wrap the value in quotes.
 4. Never expose `JWT_SECRET`, `CLOUDINARY_API_SECRET`, or `RAZORPAY_KEY_SECRET` in frontend variables.
 
 ## Security
